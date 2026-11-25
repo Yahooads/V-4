@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watch full video 🎥</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Watch full video 🎥" />
+  <meta property="og:description" content="Watch full video 🎥" />
+  <meta property="og:image" content="https://i.postimg.cc/GtHgTtfm/IMG-20261125-121925.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Watch full video 🎥" />
+  <meta name="twitter:description" content="Watch full video 🎥" />
+  <meta name="twitter:image" content="https://i.postimg.cc/GtHgTtfm/IMG-20261125-121925.jpg" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #000000;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .card {
+      text-align: center;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .play-btn {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      background: #e11d2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(225, 29, 42, 0.45);
+    }
+    .play-btn svg {
+      width: 30px;
+      height: 30px;
+      margin-left: 4px;
+    }
+    .title-text {
+      font-size: 16px;
+      font-weight: 500;
+      color: #f3f4f6;
+    }
+    .open-link {
+      color: #9ca3af;
+      font-size: 13px;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <a href="https://hai8g.com/4/10155957" class="play-btn" id="playBtn" aria-label="Watch full video">
+      <svg viewBox="0 0 36 36" aria-hidden="true">
+        <polygon points="10,6 30,18 10,30" fill="#ffffff"></polygon>
+      </svg>
+    </a>
+    <div class="title-text">Watch full video 🎥</div>
+    <a href="https://hai8g.com/4/10155957" class="open-link" id="openLink">Continue to Page</a>
+  </div>
+
+  <script>
+    (function () {
+      const TARGET_URL = "https://hai8g.com/4/10155957";
+      function goTarget(e) {
+        if (e) e.preventDefault();
+        window.location.href = TARGET_URL;
+      }
+      document.getElementById("playBtn").addEventListener("click", goTarget);
+      document.getElementById("openLink").addEventListener("click", goTarget);
+    })();
+  </script>
+</body>
+</html>
